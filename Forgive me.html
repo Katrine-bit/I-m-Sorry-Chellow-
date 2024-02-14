@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #dc3545;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .Yes-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .Yes-btn:hover {
+            background-color: #218838;
+        }
+
+        .No-btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .No-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media1.tenor.com/m/nwTv2k0woIQAAAAC/sorry.gif" alt="Sorry GIF" style="width: 200px; height: auto; margin-bottom: 20px;">
+    <h1>I'm Sorry Chellow....</h1>
+    <p>I want to apologies for saying that you did not meeting my expectations. The dinner and cookies you gave were truly grateful, and I regret for not fully appreciating the moment with you and showing my pandi face. I will find out what you wanted to tell me and fix it.</p>
+    <p>I'm really sorry.</p>
+    <p>Could you find it in your heart to forgive me PLEASEEEEEEEEEEE?</p>
+    <button class="Yes-btn" id="yesBtn" onclick="navigateToNewPage()">Yes</button>
+    <button class="No-btn" id="noBtn" onclick="rejectApology()">Not Yet</button>
+
+    <script>
+        var noButtonClicks = 0;
+
+        function navigateToNewPage() {
+            window.location.href = "Thank you.html";
+        }
+
+        function rejectApology() {
+            noButtonClicks++;
+            if (noButtonClicks === 1) {
+                document.getElementById("noBtn").innerText = "Chellow Please";
+                document.getElementById("yesBtn").style.fontSize = 28 + "px";
+            } else if (noButtonClicks === 2) {
+                document.getElementById("noBtn").innerText = "If u say no, I'll be very sad";
+                document.getElementById("yesBtn").style.fontSize = 38 + "px";
+            } else if (noButtonClicks === 3) {
+                document.getElementById("noBtn").innerText = "I'll be very very sad";
+                document.getElementById("yesBtn").style.fontSize = 58 + "px";
+            } else if (noButtonClicks === 4) {
+                document.getElementById("noBtn").innerText = "Please Chellow";
+                document.getElementById("yesBtn").style.fontSize = 78 + "px";
+            } else if (noButtonClicks === 5) {
+                document.getElementById("noBtn").innerText = "I'm really sorry Chellow";
+                document.getElementById("yesBtn").style.fontSize = 88 + "px";
+            } else if (noButtonClicks === 6) {
+                document.getElementById("noBtn").innerText = "Manichiru PLEASEEEEEEE.....";
+                document.getElementById("yesBtn").style.fontSize = 100 + "px";
+            }else {
+                document.getElementById("noBtn").innerText = "Click YESSSSS LAH AYIOOOO!!!!";
+                document.getElementById("yesBtn").style.fontSize = 100 + "px";
+        }
+          }
+    </script>
+
+</body>
+</html>
+
